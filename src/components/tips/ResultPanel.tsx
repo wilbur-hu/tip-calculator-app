@@ -16,7 +16,7 @@ export default function ResultPanel({
   return (
     <div
       className={cn(
-        "m-[32px] ml-[48px] flex w-[413px] flex-col items-stretch rounded-[15px] bg-very-dark-cyan p-[40px] ",
+        "flex flex-col items-stretch rounded-[15px] bg-very-dark-cyan p-[40px]",
         className,
       )}
     >
@@ -25,12 +25,12 @@ export default function ResultPanel({
           <span className="text-[16px] font-bold leading-[24px] text-white">
             Tip Amount
           </span>
-          <span className="text-grayish-cyan text-[13px] font-bold leading-[19px]">
+          <span className="text-[13px] font-bold leading-[19px] text-grayish-cyan">
             / person
           </span>
         </div>
 
-        <span className="text-[48px] font-bold leading-[71px] tracking-[-1px] text-strong-cyan">
+        <span className="text-[32px] font-bold leading-[71px] tracking-[-0.67px] text-strong-cyan md:text-[48px] md:tracking-[-1px]">
           ${tipPerPerson.toFixed(2)}
         </span>
       </div>
@@ -40,18 +40,18 @@ export default function ResultPanel({
           <span className="text-[16px] font-bold leading-[24px] text-white">
             Total
           </span>
-          <span className="text-grayish-cyan text-[13px] font-bold leading-[19px]">
+          <span className="text-[13px] font-bold leading-[19px] text-grayish-cyan">
             / person
           </span>
         </div>
 
-        <span className="text-[48px] font-bold leading-[71px] tracking-[-1px] text-strong-cyan">
+        <span className="text-[32px] font-bold leading-[71px] tracking-[-0.67px] text-strong-cyan md:text-[48px] md:tracking-[-1px]">
           ${totalPerPerson.toFixed(2)}
         </span>
       </div>
 
       <button
-        className="mt-[122px] h-[48px] rounded-[5px] bg-strong-cyan text-[20px] font-bold uppercase leading-[30px] text-very-dark-cyan"
+        className="mt-[32px] h-[48px] rounded-[5px] bg-strong-cyan text-[20px] font-bold uppercase leading-[30px] text-very-dark-cyan md:mt-[122px]"
         onClick={onReset}
       >
         reset

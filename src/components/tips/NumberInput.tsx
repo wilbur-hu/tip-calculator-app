@@ -41,7 +41,7 @@ export default function NumberInput({
 
       <div
         className={cn(
-          "bg-very-light-grayish-cyan mt-[6px] flex h-[48px] items-center rounded-[5px] border-2 border-solid",
+          "mt-[6px] flex h-[48px] items-center rounded-[5px] border-2 border-solid bg-very-light-grayish-cyan",
           "focus-within:border-strong-cyan",
           inputBorderClass,
         )}
@@ -51,18 +51,21 @@ export default function NumberInput({
           alt="input icon"
           className="ml-[19.26px] shrink-0 object-contain"
         />
-        <input
-          id="bill"
-          type="number"
-          placeholder="0"
-          value={value}
-          className={cn(
-            "mr-[17px] grow bg-transparent text-right text-[24px] font-bold leading-[36px] text-very-dark-cyan outline-none",
-          )}
-          onChange={(e) => {
-            onValueChange?.(parseFloat(e.target.value));
-          }}
-        />
+
+        <div className="mr-[17px] grow">
+          <input
+            id="bill"
+            type="number"
+            placeholder="0"
+            value={value}
+            className={cn(
+              "w-full bg-transparent text-right text-[24px] font-bold leading-[36px] text-very-dark-cyan outline-none",
+            )}
+            onChange={(e) => {
+              onValueChange?.(parseFloat(e.target.value));
+            }}
+          />
+        </div>
       </div>
     </div>
   );

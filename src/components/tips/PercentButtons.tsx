@@ -54,7 +54,7 @@ export default function PercentButtons({
       </label>
       <div
         className={cn(
-          "mt-[16px] grid grid-cols-3 grid-rows-2 gap-x-[14px] gap-y-[16px]",
+          "mt-[16px] grid grid-cols-2 grid-rows-3 gap-x-[14px] gap-y-[16px] md:grid-cols-3 md:grid-rows-2",
         )}
       >
         {percentValues.map((percent) => (

@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         "space-mono": ["Space Mono"],
       },
+      screens: {
+        sm: "375px",
+      },
     },
   },
   plugins: [],

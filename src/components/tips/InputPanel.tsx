@@ -52,10 +52,13 @@ export default function InputPanel(props: InputProps) {
         value={state.bill}
       />
 
-      <PercentButtons className="mt-[40px]" onPercentChange={onPercentChange} />
+      <PercentButtons
+        className="mt-[32px] md:mt-[40px]"
+        onPercentChange={onPercentChange}
+      />
 
       <NumberInput
-        className="mb-[48px] mt-[40px]"
+        className="mt-[32px] md:mb-[48px] md:mt-[40px]"
         label="Number of People"
         icon={iconPerson}
         error={error.people}

@@ -34,13 +34,17 @@ export default function Calculator({ className }: TipCalculatorProps) {
   return (
     <div
       key={key}
-      className={cn("flex w-[920px] rounded-[25px] bg-white", className)}
+      className={cn(
+        "flex w-[375px] flex-col rounded-t-[25px] bg-white p-[32px] md:w-[920px] md:flex-row md:rounded-[25px] md:p-0",
+        className,
+      )}
     >
       <InputPanel
-        className="ml-[48px] mt-[45px] w-[379px]"
+        className="md:ml-[48px] md:mt-[45px] md:w-[379px]"
         onValueChange={onValueChange}
       />
       <ResultPanel
+        className="mt-[32px] md:m-[32px] md:ml-[48px] md:w-[413px] "
         tipPerPerson={state.tipPerPerson}
         totalPerPerson={state.totalPerPerson}
         onReset={reset}
